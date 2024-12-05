@@ -4,21 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo</title>
+    <style>
+        /* Fundo com brilho */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(45deg, #1b2735, #090a0f, #3b3a39);
+            background-size: 400% 400%;
+            animation: fundo-brilho 10s ease infinite;
+            color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        @keyframes fundo-brilho {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Estilo da caixa de texto */
+        div {
+            background-color: rgba(26, 99, 207, 0.418);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(6, 165, 157, 0.74);
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ae18cc;
+            text-shadow: 0 0 10px #ae18cc, 0 0 20px #ae18cc;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #eaeaea;
+        }
+
+        button {
+            background-color: #ae18cc;
+            color: #1b2735;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #f5d020;
+        }
+    </style>
 </head>
 <body>
-    <div style="text-align: center;">
-        <h1>Bem vindo joven aluno</h1>
-        <p>Carta de boas-vindas à casa escolhida</p>
-        <p>Prezado Aluno:
-
-            Temos o prazer de informar que você tem uma vaga na Escola de Magia e Bruxaria de Hogwarts. Consulte a lista de equipamentos e livros necessários. As aulas começam em 1º de setembro. Esperamos ver sua coruja antes de 31 de julho.
-            
-            Atenciosamente,
-            Minerva McGonagall
-            Vice-Diretora</p>
+    <div>
+        <h1>Bem-vindo, jovem aluno!</h1>
+        <p>
+            Carta de boas-vindas à casa escolhida.
+        </p>
+        <p>
+            Prezado Aluno:<br><br>
+            Temos o prazer de informar que você tem uma vaga na Escola de Magia e Bruxaria de Hogwarts. Consulte a lista de equipamentos e livros necessários. As aulas começam em 1º de setembro. Esperamos ver sua coruja antes de 31 de julho.<br><br>
+            Atenciosamente,<br>
+            <strong>Minerva McGonagall</strong><br>
+            Vice-Diretora
+        </p>
         <button onclick="voltar()">Voltar</button>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function voltar() {
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
-
 </html>
